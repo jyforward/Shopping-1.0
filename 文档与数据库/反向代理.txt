@@ -1,0 +1,31 @@
+
+        location /api {
+        proxy_pass  https://shopping.ceair.com/api//MarketEP/GetEPListBy/Pc_Ad_00003;
+        }
+        location /xiala {
+        proxy_pass  https://shopping.ceair.com/api/CustomCataLog/GetForPc;
+        }
+
+        location /data {
+        proxy_pass  https://shopping.ceair.com/api/HomeFloor/GetAllHomeFloor;
+        }
+
+        location /tuijian {
+        proxy_pass  https://shopping.ceair.com/api/MarketEP/GetEPListBy/Pc_Ad_00004;
+        }
+
+        location /letop {
+        proxy_pass   https://shopping.ceair.com/api/MarketEP/GetEPListBy/Pc_Ad_00005;
+        }
+
+        location /lecon {
+        proxy_pass   https://shopping.ceair.com/api/MarketEP/GetEPListBy/Pc_Ad_00006;
+        }
+
+        location /lebtom {
+        proxy_pass   https://shopping.ceair.com/api/MarketEP/GetEPListBy/Pc_Ad_00007;
+        }
+
+        location /list {
+        proxy_pass  https://shopping.ceair.com/api/product/detail/;
+        }

@@ -1,0 +1,160 @@
+body {
+  cursor: pointer;
+}
+
+.login {
+  width: 100%;
+  height: auto;
+  border: 1px solid red;
+  margin: 0 auto;
+  position: relative;
+}
+
+.login .header {
+  width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login .contend {
+  width: 1200px;
+  height: 695px;
+  border: 1px solid #999;
+  margin: 0 auto;
+}
+
+.login .contend .back {
+  height: 695px;
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+}
+
+.login .contend .forms {
+  width: 420px;
+  height: 370px;
+  position: absolute;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  top: 110px;
+  z-index: 666;
+}
+
+.login .contend .forms .forms_ul {
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  display: flex;
+}
+
+.login .contend .forms .forms_ul li {
+  flex: 1;
+  background-color: #5AA5F0;
+}
+
+.login .contend .forms .forms_ul li:nth-of-type(1) {
+  background-color: #fff;
+}
+
+.login .contend .forms .fors {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.login .contend .forms .fors .Login {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+  background-color: #fff;
+}
+
+.login .contend .forms .fors .Register {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+  background-color: #fff;
+}
+
+.login .contend .forms .fors form {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.login .contend .forms .fors form p {
+  width: 380px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.login .contend .forms .fors form p:nth-of-type(1) {
+  font-weight: bold;
+}
+
+.login .contend .forms .fors form p label {
+  display: inline-block;
+  width: 80px;
+  height: 36px;
+  line-height: 36px;
+  padding-right: 5px;
+}
+
+.login .contend .forms .fors form p label.error {
+  width: 350px;
+  color: #da586e;
+  text-align: end;
+}
+
+.login .contend .forms .fors form p input {
+  width: 60%;
+  height: 30px;
+  padding: 3px 10px;
+  outline: none;
+  border: 1px solid #999999;
+}
+
+.login .contend .forms .fors form p button {
+  width: 200px;
+  height: 40px;
+  color: #fff;
+  text-align: center;
+  outline: none;
+  line-height: 40px;
+  background-color: aqua;
+  margin-left: 90px;
+}
+
+.login .contend .list {
+  width: 960px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid red;
+}
+
+.login .foot {
+  height: 130px;
+  width: 100%;
+  background-color: #EFEFEF;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+
+.login .foot p {
+  font-size: 12px;
+  color: #999;
+}
+
+.login .foot span {
+  font-size: 12px;
+  color: #999;
+}

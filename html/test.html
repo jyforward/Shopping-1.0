@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery/jquery.min.js"></script>
+    <!-- <script src="../js/ajax.js"></script> -->
+    <!-- <script src="../js/test.js"></script> -->
+</head>
+
+<body>
+    <!-- <img src="http://ceair.oss-cn-shanghai.aliyuncs.com/image/PromotionBit/202012DD/pb_1d4e4048-be02-45af-b4ac-e53e08cb210f.jpg" -->
+                            class="d-block w-100"
+                            >
+    <!-- <img src="http://ceair.oss-cn-shanghai.aliyuncs.com/image/PromotionBit/202011DD/pb_416cf50f-9b46-4e30-8564-f872739dca35.jpg" style="display: inline;"> -->
+    <!-- src="http://ceair.oss-cn-shanghai.aliyuncs.com/image/PromotionBit/202011DD/pb_341874ab-4a84-4865-98ea-ccc04fa64417.jpg" -->
+    <!-- 4 为热门推荐   https://shopping.ceair.com/api/MarketEP/GetEPListBy/Pc_Ad_00004   keywordNo:1-->
+    <!-- 5 为左侧大图 https://shopping.ceair.com/api/MarketEP/GetEPListBy/Pc_Ad_00005   keywordNo:1-->
+    <!-- 6 为中间字体   https://shopping.ceair.com/api/MarketEP/GetEPListBy/Pc_Ad_00006    keywordNo:1-->
+    <!-- 7 为下部导航区   https://shopping.ceair.com/api/MarketEP/GetEPListBy/Pc_Ad_00007   keywordNo:1-->
+
+    <!-- 点击图片获取的数据  https://shopping.ceair.com/marketapi//activitypageservice/querydata   isPreview: ""
+            pageCode: "MALL_000005_2020111603534233 //获取数据时那个url后面的参数"
+            platform: 0
+            reqId: "string" -->
+            <!-- <img src="http://ceair.oss-cn-shanghai.aliyuncs.com/image/Product/20201116/ps_1f8f195c-ac2a-4a78-8c5e-08f6107f62d5.jpg" alt="" /><img src="http://ceair.oss-cn-shanghai.aliyuncs.com/image/Product/20201116/ps_8e81f17a-9170-4f2e-bf76-1cde69e6c29d.jpg" alt="" /> -->
+    <script>
+        // 今日推荐的数据
+        $.ajax({
+            type: "post",
+            url: "/api",
+            dataType: "json",
+            success: function (response) {
+                console.log(response);
+            }
+        });
+
+        // 主题数据
+        $.ajax({
+            type: "post",
+            url: "/data",
+            dataType: "json",
+            success: function (response) {
+                console.log(response);
+            }
+        });
+
+        $.ajax({
+            type: "post",
+            url: "/bbb",
+            dataType: "json",
+            success: function (response) {
+                console.log(response);
+            }
+        });
+
+        // 热门推荐数据
+        $.ajax({
+            type: "post",
+            url: "/tuijian",
+            data: {
+                keywordNo: 1
+            },
+            dataType: "json",
+            success: function (response) {
+                console.log(response);
+            }
+        });
+
+        // 每张图片点进去的数据
+        $.ajax({
+            type: "post",
+            url: "/tests",
+            contentType: 'application/json; charset=UTF-8',
+            data: JSON.stringify({
+                isPreview: "",
+                pageCode: "MALL_M55215_2020112610485684",
+                platform: 0,
+                reqId: "string"
+            }),
+            // contentType: "application/json;charset=UTF-8",
+            dataType: "json",
+            success: function (response) {
+                console.log(response);
+            }
+        });
+
+
+        // 下拉列表的数据
+        // Name: "旅行箱包"
+        // Resources: []
+        // Subset: []
+        // SysNo: 1006
+        // Url: "http://shopping.ceair.com/search?category3_id=268
+        // id=268为跳转的页面加载数据的id值   https://shopping.ceair.com/api/product/search  {
+        // page: 1
+        // size: 24
+        // from_price: 0
+        // to_price: 0
+        // brand_id:
+        // nocheckkeyword: false
+        // order_by: 0
+        // order_key: 综合
+        // category3_id: 268
+        // request:
+        // pk_campaign: spfl_a0_b0_c0}
+        $.ajax({
+            type: "get",
+            url: "/xiala",
+            contentType: 'application/json; charset=UTF-8',
+            dataType: "json",
+            success: function (response) {
+                console.log(response);
+            }
+        });
+
+        $.ajax({
+            type: "post",
+            url: "/list152040",
+            dataType: "json",
+            success: function (response) {
+                console.log(response);
+            }
+        });
+
+        let obj ={};
+        obj.name = "张三";
+        obj.age = "18";
+        obj.sex = "男"
+        console.log(obj);
+        localStorage.setItem("data",JSON.stringify(obj));
+        console.log(JSON.parse(localStorage.getItem("data")) );
+    </script>
+</body>
+
+</html>
